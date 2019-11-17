@@ -1,0 +1,21 @@
+@font-face{
+	font-family: 'GothamPro';
+	src: url('../fonts/GothamPro.eot');
+	src: url('../fonts/GothamPro.eot?iefix') format('eot'),
+	url('../fonts/GothamPro.woff') format('woff'),
+	url('../fonts/GothamPro.ttf') format('truetype'),
+	url('../fonts/GothamPro.svg#GothamPro') format('svg');
+	/*font-weight: normal;*/
+	/*font-style: normal;*/
+}
+
+@font-face{
+	font-family: 'CoachellaMedium';
+	src: url('../fonts/CoachellaMedium.eot');
+	src: url('../fonts/CoachellaMedium.eot?iefix') format('eot'),
+	url('../fonts/CoachellaMedium.woff') format('woff'),
+	url('../fonts/CoachellaMedium.ttf') format('truetype'),
+	url('../fonts/CoachellaMedium.svg#CoachellaMedium') format('svg');
+	/*font-weight: normal;*/
+	/*font-style: normal;*/
+}

@@ -1,0 +1,43 @@
+:root {
+	--white-color: #fff;
+	--grey-color: #333;
+	--gold-color: #ffbb33;
+	--black-color: #0d0d0d;
+}
+
+html {
+	font-size: 17px;
+	background-color: var(--black-color);
+}
+
+.title {
+	font-family: 'CoachellaMedium';
+	font-size: 5.3rem;
+	line-height: 5.3rem;
+	color: var(--white-color);
+	letter-spacing: -0.235rem;
+}
+
+.sub-title {
+	font-family: 'CoachellaMedium';
+	font-size: 2.941rem;
+	line-height: 2.941rem;
+	color: var(--gold-color);
+	letter-spacing: -0.098rem;
+}
+
+.mark-discript {
+	font-family: 'GothamPro';
+	font-size: 1rem;
+	line-height: 1.764rem;
+	color: var(--gold-color);
+	letter-spacing: -0.029rem;
+}
+
+.discript {
+	font-family: 'GothamPro';
+	font-size: 1rem;
+	line-height: 1.764rem;
+	color: var(--white-color);
+	letter-spacing: -0.029rem;
+}

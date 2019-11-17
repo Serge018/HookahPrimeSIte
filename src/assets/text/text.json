@@ -1,0 +1,137 @@
+{
+
+	"head_line": {
+		"calculate_price": {
+			"ru": "Посчитать",
+			"en": "Calculate Price"
+		},
+		"amount_of_hookahs": {
+			"ru": "Количество кальянов",
+			"en": "Amount of Hookahs"
+		},
+		"amount_of_hours": {
+			"ru": "Количество часов",
+			"en": "Amount of Hours"
+		}
+	},
+
+	"abut_us": {
+		"title": {
+			"ru": "About us",
+			"en": "About us"
+		},
+		"sub_title": {
+			"ru": "Hookah Prime – компания, предоставляющая услуги кальянного кейтеринга премиум-класса.",
+			"en": "Hookah Prime – компания, предоставляющая услуги кальянного кейтеринга премиум-класса."
+		},
+		"discript": {
+			"ru": "Более 10 лет мы занимаемся изучением физики курения кальяна — вкус, дымность, тяга, крепость, продолжительность курения и влияние кальяна на организм, а также, гн.юансы миксологии табачных смесей.",
+			"en": "Благодаря этому, мы можем быть уверены, что вы останетесь нами довольны."
+		}
+	},
+
+	"our_clients": {
+		"title": {
+			"ru": "Our Clients",
+			"en": "Our Clients"
+		}
+	},
+
+	"prime_masters": {
+		"title": {
+			"ru": "Prime Masters",
+			"en": "Prime Masters"
+		},
+		"name_Misha": {
+			"ru": "Mikhail Shapovalov",
+			"en": "Mikhail Shapovalov"
+		},
+		"discript_Misha": {
+			"ru": "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher.",
+			"en": "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher."
+		},
+		"name_Vova": {
+			"ru": "Vladimir Shapovalov",
+			"en": "Vladimir Shapovalov"
+		},
+		"discript_Vova": {
+			"ru": "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher.",
+			"en": "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher."
+		}
+	},
+
+	"prime_hookah": {
+		"title": {
+			"ru": "Prime Hookahs",
+			"en": "Prime Hookahs"
+		},
+		"sub_title": {
+			"ru": "Каждый элемент тщательно подбирается и тестируется нашими мастерами, чтобы обеспечить вам максимальный комфорт от курения.",
+			"en": "Каждый элемент тщательно подбирается и тестируется нашими мастерами, чтобы обеспечить вам максимальный комфорт от курения."
+		},
+		"discript": {
+			"ru": "Мы ухаживаем за нашими кальянами и постоянно находимся в поиске новых решений, чтобы угодить самым изысканным вкусам ваших гостей.",
+			"en": "Мы ухаживаем за нашими кальянами и постоянно находимся в поиске новых решений, чтобы угодить самым изысканным вкусам ваших гостей."
+		}
+	},
+
+	"cerimonies": {
+		"title_main": {
+			"ru": "Our Ceremonies Philosophy",
+			"en": "Our Ceremonies Philosophy"
+		},
+		"title_prepare": {
+			"ru": "Detailed Prepair",
+			"en": "Detailed Prepair"
+		},
+		"discript_prepare": {
+			"ru": "Мастер приезжает за час до назначенного времени, подготавливает рабочее место и кальяны.",
+			"en": "Мастер приезжает за час до назначенного времени, подготавливает рабочее место и кальяны."
+		},
+		"title_degustetion": {
+			"ru": "Presentation & Degustation",
+			"en": "Presentation & Degustation"
+		},
+		"discript_degustetion": {
+			"ru": "Существет большое количество различных сортов и вкусов табака. Мы презентуем каждый кальян, ведь мы заинтересованы в том, чтобы вы действительно насладились процессом курения",
+			"en": "Существет большое количество различных сортов и вкусов табака. Мы презентуем каждый кальян, ведь мы заинтересованы в том, чтобы вы действительно насладились процессом курения"
+		},
+		"title_support": {
+			"ru": "Competent Support",
+			"en": "Competent Support"
+		},
+		"discript_support": {
+			"ru": "Полный контроль курения кальянов, своевременная замена углей и чаши. Так же, мы следим за тем, какие эмоции испытывает человек во время курения.",
+			"en": "Полный контроль курения кальянов, своевременная замена углей и чаши. Так же, мы следим за тем, какие эмоции испытывает человек во время курения."
+		},
+		"title_discipne": {
+			"ru": "Cleanliness & Discipline",
+			"en": "Cleanliness & Discipline"
+		},
+		"discript_discipne": {
+			"ru": "За собой мы оставляем чистоту и порядок в зоне отведеной для курения.",
+			"en": "За собой мы оставляем чистоту и порядок в зоне отведеной для курения."
+		}
+	},
+
+	"footer": {
+		"title": {
+			"ru": "Hookah Prime",
+			"en": "Hookah Prime"
+		},
+		"sub_title": {
+			"ru": "luxury catering",
+			"en": "luxury catering"
+		},
+		"discript": {
+			"ru": "Мы всегда готовы обсудить ваши идеи и предложения. Звоните и мы сделаем ваше событие незабываемым!",
+			"en": "Мы всегда готовы обсудить ваши идеи и предложения. Звоните и мы сделаем ваше событие незабываемым!"
+		}
+	},
+
+	"contacts": {
+		"email": "info@hprime.ru",
+		"phone": "+7 905 232 4304",
+		"insta": "hookah_prime"
+	}
+}
