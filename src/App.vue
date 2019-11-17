@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <p class="mark-discript">Hello, World!</p>
-
-
-
-    <!-- <img src="./assets/img/logo.png"> -->
     <Header/>
+    <AboutUs/>
+    <Clients/>
+    <Masters/>
+    <Ceremonies/>
+    <Hookah/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
-import Header from './sections/Header'
+import Header from './sections/Header';
+import AboutUs from './sections/About_us';
+import Clients from './sections/Clients';
+import Masters from './sections/Masters';
+import Ceremonies from './sections/Ceremonies';
+import Hookah from './sections/Hookah';
+import Footer from './sections/Footer';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    AboutUs,
+    Clients,
+    Masters,
+    Ceremonies,
+    Hookah,
+    Footer
   }
 }
 </script>

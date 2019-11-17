@@ -6,7 +6,7 @@
 }
 
 html {
-	font-size: 17px;
+	font-size: 14px;
 	background-color: var(--black-color);
 }
 
@@ -40,4 +40,28 @@ html {
 	line-height: 1.764rem;
 	color: var(--white-color);
 	letter-spacing: -0.029rem;
+}
+
+ @media (min-width: 768px) { 
+/* 	html {
+	font-size: 14px;
+} */
+} 
+
+@media (min-width: 992px) { 
+	html {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 1200px) { 
+	html {
+		font-size: 17px;
+	}
+}
+
+@media (min-width: 1600px) { 
+	html {
+		font-size: 20px;
+	}
 }

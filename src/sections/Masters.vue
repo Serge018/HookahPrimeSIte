@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'Masters',
   data () {
     return {
       msg: ''

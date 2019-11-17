@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 
+import "normalize.css";
 import "./assets/css/fonts.css";
 import "./assets/css/global.css";
 
