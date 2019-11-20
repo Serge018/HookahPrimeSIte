@@ -1,9 +1,9 @@
 <template>
 	<div class="calc-container">
 
-	<BtnCount v-for="opt in optBtns" :prop="opt" @changeCount="changeCount"/>
-	<!-- <BtnCount :prop="optBtns[0]" @changeCount="changeCount" /> -->
-	<!-- <BtnCount :prop="optBtns[1]" @changeCount="changeCount" /> -->
+	<!-- <BtnCount v-for="opt in optBtns" :prop="opt" @changeCount="changeCount"/> -->
+	<BtnCount :prop="optBtns[0]" @changeCount="changeCount" />
+	<BtnCount :prop="optBtns[1]" @changeCount="changeCount" />
 
 	<div class="total price">{{ totalPrice }}$</div>
 	<div class="btn-order">ORDER</div>

@@ -57,6 +57,7 @@ export default {
     font-size: 0.882rem;
     line-height: 2em;
     letter-spacing: 5px;
+    // color: white;
     color: white;
     width: 17.098rem;
     height: 10.558rem;

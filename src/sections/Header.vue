@@ -28,8 +28,8 @@ export default {
   name: 'Header',
   data () {
     return {
-    	calcVisible: false,
     	lang: "en",
+    	calcVisible: false,
       text: head_line,
       typesOfCalc: ["amount_of_hookahs", "amount_of_hours"]
     }
