@@ -1,7 +1,10 @@
 <template>
-  <div class="btn-wrapper">
+  <div class="btn btn-wrapper">
     <div class="btn-container">
-      <div class="btn-intry">{{ text }}
+      <div class="btn-intry" 
+        v-on:click="flare" 
+        :class="{ blink : isBlink }"
+         > {{ text }}
         <div class="border border-top"></div>
         <div class="border border-bottom"></div>
         <div class="border border-left"></div>
@@ -14,16 +17,34 @@
 <script>
 export default {
   name: 'BtnShowCalc',
-  props: [ "text" ],
   data () {
     return {
-      msg: ''
+      isBlink: false
+    }
+  },
+  props: [ "text" ],
+  methods: {
+    flare: function () {
+      this.isBlink = true;
+      this.$emit("showCalc", true);
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+  .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: 300ms;
+    transition-delay: 300ms;
+    transition-timing-function: cubic-bezier(.63,.22,.85,.36);
+  }
+
+  .fade-leave-to {
+    opacity: 0;
+  }
+
   .btn-wrapper {
     position: absolute;
     top: 38.823rem;
@@ -49,12 +70,49 @@ export default {
     height: 33.33%;
     cursor: pointer;
     transition: background-color 150ms linear;
-  }
-  .btn-intry:hover {
-    background-color: rgba(255, 170, 0, 0.2);
 
-    .border {
-      background-color: rgba(255,187,51,0.9);
+    &.blink,
+    &.blink:hover {
+      transition-property: background-color;
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(.04,.98,.01,1.44);
+      background-color: rgba(255, 170, 51, 0.9);
+
+      &:before,
+      &:after{
+        transition: opacity 200ms linear;
+        opacity: 0;
+      }
+      .border {
+        background-color: rgba(255,187,51,1);
+      }
+    }
+
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+    &:before {
+      background: linear-gradient(180deg, rgba(255,187,51,0.9) 0%, rgba(255,187,51,0.2) 98%);
+      top: 100%;
+    }
+    &:after {
+      background: linear-gradient(0deg, rgba(255,187,51,0.9) 0%, rgba(255,187,51,0.2) 98%);
+      bottom: 100%;
+    }
+
+    &:hover {
+      background-color: rgba(255, 170, 51, 0.2);
+
+      .border {
+        background-color: rgba(255,187,51,0.9);
+      }
     }
   }
 
@@ -92,27 +150,6 @@ export default {
     &-right {
       right: 0px;
       bottom: 0px; 
-    }
-  }
-
-  .btn-intry {
-    &:before,
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: 50%;
-      width: 1px;
-      height: 100%;
-      transform: translateX(-50%);
-    }
-    &:before {
-      background: linear-gradient(180deg, rgba(255,187,51,0.9) 0%, rgba(255,187,51,0.2) 98%);
-      top: 100%;
-    }
-    &:after {
-      background: linear-gradient(0deg, rgba(255,187,51,0.9) 0%, rgba(255,187,51,0.2) 98%);
-      bottom: 100%;
     }
   }
 

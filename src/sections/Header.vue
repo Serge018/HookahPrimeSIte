@@ -1,33 +1,43 @@
 <template>
   <div id="header">
-		<img class="logo" src="../assets/img/main.svg" alt="main_img">	
-		<BtnShowCalc :text='text.calculatePrice' />
+		<img class="logo" src="../assets/img/main.svg" alt="main_img">
+		<transition name="fade">
+			<BtnShowCalc 
+				v-show="!calcVisible"
+				:text='text.calculate_price[lang]'
+				@showCalc="calcVisible = $event" 
+			/>
+		</transition>
+		<transition name="fade-in">
+			<AdapterCalc
+				v-show="calcVisible"
+				:text="text"
+				:typesOfCalc="typesOfCalc"
+			/>
+		</transition>
+		
   </div>
 </template>
 
 <script>
 import { head_line } from '../assets/text/text.json';
 import BtnShowCalc from '../components/BtnShowCalc';
-
-const {
-	calculate_price, 
-	amount_of_hookahs, 
-	amount_of_hours
-} = head_line;
-
+import AdapterCalc from '../components/AdapterCalc';
 
 export default {
   name: 'Header',
   data () {
     return {
-      text: {
-      	calculatePrice: calculate_price.en,
-      	amountOfHookahs: amount_of_hookahs.en,
-      	amountOfHours: amount_of_hours.en
-      }
+    	calcVisible: false,
+    	lang: "en",
+      text: head_line,
+      typesOfCalc: ["amount_of_hookahs", "amount_of_hours"]
     }
   },
-  components: { BtnShowCalc }
+  components: { 
+  	BtnShowCalc,
+  	AdapterCalc
+  }
 }
 </script>
 
