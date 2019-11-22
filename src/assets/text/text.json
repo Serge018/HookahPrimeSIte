@@ -34,7 +34,18 @@
 		"title": {
 			"ru": "Our Clients",
 			"en": "Our Clients"
-		}
+		},
+		"setImgName": [
+			"bip_icon", 
+			"munshtuk_icon", 
+			"eagle_icon", 
+			"papatut_icon",
+			"munshtuk_icon", 
+			"eagle_icon", 
+			"bip_icon", 
+			"munshtuk_icon", 
+			"affa_icon"
+		]
 	},
 
 	"prime_masters": {

@@ -1,7 +1,6 @@
 <template>
   <div id="about-us">
     <div class="rich-text title"></div>
-
     <div class="mark-discript-wrap">
       <div class="top"></div>
       <div class="bottom"></div>
@@ -9,14 +8,13 @@
         {{ markDiscript }}
       </div>
     </div>
-
     <div class="discript">{{ discript }}</div>
   </div>
 </template>
 
 <script>
-  import { abut_us } from '../assets/text/text.json';
-  import utils from '../utils/utils.js'
+import { abut_us } from '../assets/text/text.json';
+import utils from '../utils/utils.js'
 
 export default {
   name: 'AboutUs',
@@ -51,12 +49,11 @@ export default {
 
 <style lang="scss" scoped>
 	#about-us {
-		height: 100vh;
 		width: 100%;
 	}
 
   .rich-text {
-    margin-top: 14.882rem;
+    margin-top: 9.824rem;
     margin-left: 17.647rem;
   }
 
@@ -72,8 +69,7 @@ export default {
     margin-top: 2.764rem;
     border-radius: 4.411rem;
     box-sizing: border-box;
-    // box-sizing: padding-box;
-    background: linear-gradient(90deg, rgba(255,187,51,0.1) 0%, rgba(255,187,51,0.0) 40%);
+    background: linear-gradient(90deg, rgba(255,187,51,0.2) 0%, rgba(255,187,51,0.0) 60%);
       
     .top,
     .bottom {

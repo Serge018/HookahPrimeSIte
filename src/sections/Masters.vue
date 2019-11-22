@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div id="masters">
 
 
   </div>
@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style scoped>
+#masters {
+	height: 50vh;
+}
 
 </style>

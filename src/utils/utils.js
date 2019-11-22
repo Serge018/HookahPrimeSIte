@@ -1,30 +1,46 @@
 import * as PIXI from 'pixi.js';
 
 export default {
-	createTitle: function({parent, text, width, height}) {
+	createTitle: function({parent, text, type = "title", width, height}) {
+    let fontSize, lineHeight, letterSpacing, fill;
+    if (type === "title") {
+      fontSize = 70, 
+      lineHeight = 75, 
+      letterSpacing = -4, 
+      fill = ["rgba(255,255,255,0.9)", "rgba(255,255,255,0.2)"];
+    } else {
+      fontSize = 50, 
+      lineHeight = 55, 
+      letterSpacing = -1.67,
+      fill = ["rgba(255,187,51,0.9)", "rgba(255,187,51,0.2)"];
+    }
+
 		const loader = PIXI.Loader.shared;
+    loader.reset();
     const app = new PIXI.Application({ 
         transparent: true,
         width: width, 
         height: height
       });
     parent.appendChild(app.view);
-    loader.reset();
     
     loader.add("../assets/fonts/CoachellaMedium.ttf");
     loader.load((loader, resources) => {
       const style = new PIXI.TextStyle({
         fontFamily: 'CoachellaMedium',
-        fontSize: 70,
-        lineHeight: 75,
+        fontSize,
+        lineHeight,
         fontWeight: '400',
-        fill: ["rgba(255,255,255,0.9)", "rgba(255,255,255,0.2)"],
+        fill,
         fillGradientType: 1,
         fillGradientStops: [ 0.3, 1 ],
-        letterSpacing: -4,
+        letterSpacing
       });
       const richText = new PIXI.Text(text, style);
       app.stage.addChild(richText);
     });
-	}
+	},
+  getWidth: function(el) {
+    return parseInt(getComputedStyle(el).width);
+  }
 }
