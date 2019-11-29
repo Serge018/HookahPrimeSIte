@@ -15,7 +15,9 @@
 
 <script>
 import { our_clients } from '../assets/text/text.json';
-import utils from '../utils/utils.js';
+import helpers from '../utils/helpers.js';
+import drawTitle from '../utils/drawTitle.js';
+import Inertia from '../utils/inertia.js';
 
 export default {
   name: 'Clients',
@@ -26,12 +28,9 @@ export default {
     	setImgName: our_clients.setImgName,
     	clientsBar: null,
     	wrapperClientsBar: null,
+    	inertia: null,
     	offset: 0,
-    	widthWrapClientsBar: 0,
-    	positionMouseX: 0,
-    	flag: false,
-    	enterPoint: 0,
-    	leavePoint: 0
+    	widthWrapClientsBar: 0
     }
   },
   computed: {
@@ -41,29 +40,35 @@ export default {
   },
   methods: {
   	moveBar: function(event) {
-  		// if (this.flag) {}
-  		const delta = event.clientX/this.widthWrapClientsBar*this.offset;
-  		this.clientsBar.style.left = `-${delta}px`
-  		return;
+  		if (this.offset > 0) {
+  			this.delta = event.clientX/this.widthWrapClientsBar*this.offset;
+  		}
   	},
   	checkEnter(event) {
-  		const t1 = performance.now();
-
-
-
-  		console.log("checkEnter", event.clientX);
+  		if (this.offset > 0) {
+	  		this.delta = event.clientX/this.widthWrapClientsBar*this.offset;
+	  		this.inertia = new Inertia({
+	  			max: this.offset,
+	  		});
+	  		const update = () => {
+	  			const value = this.inertia.update(this.delta);
+	  			this.clientsBar.style.left = `-${value}px`;
+	  			if (value < 1) {
+	  				this.inertia.setValue(0);
+	  			} else {
+	  				requestAnimationFrame(update);
+	  			}
+	  		}
+	  		update();
+  		}
   	},
-  	checkLeave(event) {
-
-
-
-
-  		console.log("checkLeave", event.clientX)
+  	checkLeave() {
+  		this.delta = 0;
   	}
   },
   mounted() {
   	const parent = this.$el.children[0];
-  	utils.createTitle({ 
+  	drawTitle({ 
       parent,
       type: "sub-title",
       text: this.title, 
@@ -71,11 +76,10 @@ export default {
       height: 50
     });
 
-
   	this.wrapperClientsBar = this.$el.children[1];
-  	this.widthWrapClientsBar = utils.getWidth(this.wrapperClientsBar);
+  	this.widthWrapClientsBar = helpers.getPropStyle(this.wrapperClientsBar, "width");
   	this.clientsBar = this.wrapperClientsBar.children[0];
-  	const widthClientBar = utils.getWidth(this.clientsBar);
+  	const widthClientBar = helpers.getPropStyle(this.clientsBar, "width");
   	const difference = widthClientBar-this.widthWrapClientsBar;
   	this.offset = (difference < 0) ? 0 : difference; 
   }

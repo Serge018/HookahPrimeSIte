@@ -1,7 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-export default {
-	createTitle: function({parent, text, type = "title", width, height}) {
+export default function({parent, text, type = "title", width, height}) {
     let fontSize, lineHeight, letterSpacing, fill;
     if (type === "title") {
       fontSize = 70, 
@@ -39,8 +38,4 @@ export default {
       const richText = new PIXI.Text(text, style);
       app.stage.addChild(richText);
     });
-	},
-  getWidth: function(el) {
-    return parseInt(getComputedStyle(el).width);
-  }
-}
+	}

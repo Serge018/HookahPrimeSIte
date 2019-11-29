@@ -14,7 +14,7 @@
 
 <script>
 import { abut_us } from '../assets/text/text.json';
-import utils from '../utils/utils.js'
+import drawTitle from '../utils/drawTitle.js';
 
 export default {
   name: 'AboutUs',
@@ -37,7 +37,7 @@ export default {
   },
   mounted() {
     const parent = this.$el.children[0];
-    utils.createTitle({ 
+    drawTitle({ 
       parent, 
       text: this.title, 
       width: 400, 
