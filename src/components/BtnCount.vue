@@ -1,37 +1,28 @@
 <template>
   <div class="btn-count">
-
     <div class="line line-top"></div>
     <div class="line line-bottom"></div>    
     <div class="line line-right"></div>
-
     <div class="label">
       <div class="img" :class="prop.type"></div>
-      <div class="text discript">Amount<br>of {{ prop.textLabel }}</div>
+      <div class="text discript">{{ prop.textLabel }}</div>
     </div>
-  
     <div class="counter">
       <div class="face price">{{ count }}</div>
       <div class="btn-wrapper">
-
         <div class="btn btn-up" @click="increment()">
           <svg width="12" height="6" viewPort="0 0 12 6">
             <polygon points="0,6 6,0 12,6" fill="#000" stroke="#ffbb33" stroke-width="1" />
           </svg>
         </div>
-
         <div class="line line-br"></div>
-
         <div class="btn btn-down" @click="decrement()">
           <svg width="12" height="6" viewPort="0 0 12 6">
              <polygon points="0,0 6,6 12,0" fill="#000" stroke="#ffbb33" stroke-width="1" />
           </svg>
         </div>
-
       </div>
     </div>
-
-
   </div>
 </template>
 
@@ -182,9 +173,6 @@ export default {
       }
     }
   }
-
-
-
   polygon {
     transition: fill 300ms;
   }

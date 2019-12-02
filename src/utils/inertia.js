@@ -1,9 +1,6 @@
 
-
-
-
 export default class Inertia {
-	constructor({min = 0, max, acceleration = 0.3, friction = 0.35, reflect = 0.5}) {
+	constructor({min = 0, max, acceleration = 0.25, friction = 0.3, reflect = 0}) {
 		this._minV = min;
 		this._maxV = max;
 		this._accel = acceleration;

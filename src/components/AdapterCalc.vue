@@ -1,12 +1,10 @@
 <template>
 	<div class="calc-container">
-
 	<!-- <BtnCount v-for="opt in optBtns" :prop="opt" @changeCount="changeCount"/> -->
 	<BtnCount :prop="optBtns[0]" @changeCount="changeCount" />
 	<BtnCount :prop="optBtns[1]" @changeCount="changeCount" />
-
 	<div class="total price">{{ totalPrice }}$</div>
-	<div class="btn-order">ORDER</div>
+	<div class="btn-order">{{ btnOrderText }}</div>
 	</div>
 </template>
 
@@ -15,28 +13,34 @@
 	
 	export default {
 		name: "AdapterCalc",
+		props: [ "text" ],
 		components: { BtnCount },
 		data() {
 			return {
 				countHookah: 0,
 				countHour: 0,
-				price: 48,
-				optBtns: [
-					{
-						textLabel: "Hookah",
-						type: "countHookah",
-					},
-					{
-						textLabel: "Hours",
-						type: "countHour"
-					}
-				]
+				price: 48
 			}
 		},
 		computed: {
 			totalPrice: function(){
 				return (this.countHookah*this.countHour*this.price).toString();
-			} 
+			},
+			btnOrderText: function() {
+				return (this.$props.text.order).toUpperCase();
+			},
+			optBtns: function() {
+				return [
+					{
+						textLabel: this.$props.text.amountOfHookahs,
+						type: "countHookah",
+					},
+					{
+						textLabel: this.$props.text.amountOfHours,
+						type: "countHour"
+					}
+				]
+			}
 		},
 		methods: {
 			changeCount: function(data) {

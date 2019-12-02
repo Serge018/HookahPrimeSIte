@@ -13,26 +13,27 @@
 </template>
 
 <script>
-import { abut_us } from '../assets/text/text.json';
 import drawTitle from '../utils/drawTitle.js';
 
 export default {
   name: 'AboutUs',
   data () {
     return {
-      lang: "en",
-      text: abut_us
+      lang: "",
     }
   },
   computed: {
+    text: function () {
+      return this.$store.getters.text.abutUs;
+    },
     title: function() {
-      return this.text.title[this.lang];
+      return this.text.title;
     },
     discript: function() {
-      return this.text.discript[this.lang];
+      return this.text.discript;
     },
     markDiscript: function() {
-      return this.text.mark_discript[this.lang];
+      return this.text.markDiscript;
     }
   },
   mounted() {
