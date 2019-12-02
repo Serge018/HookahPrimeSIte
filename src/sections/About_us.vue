@@ -4,9 +4,7 @@
     <div class="mark-discript-wrap">
       <div class="top"></div>
       <div class="bottom"></div>
-      <div class="mark-discript">
-        {{ markDiscript }}
-      </div>
+      <div class="mark-discript">{{ markDiscript }}</div>
     </div>
     <div class="discript">{{ discript }}</div>
   </div>

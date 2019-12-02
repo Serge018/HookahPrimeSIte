@@ -21,6 +21,7 @@ const store = new Vuex.Store({
 			"affa_icon"
 		],
 		textSet: {
+
 			en: {
 				headLine: {
 					calculatePrice: "Calculate Price",
@@ -30,8 +31,8 @@ const store = new Vuex.Store({
 				},
 				abutUs: {
 					title: "About us",
-					markDiscript: "Hookah Prime – компания, предоставляющая услуги кальянного кейтеринга премиум-класса.",
-					discript: "Более 10 лет мы занимаемся изучением физики курения кальяна — вкус, дымность, тяга, крепость, продолжительность курения и влияние кальяна на организм, а также, гн.юансы миксологии табачных смесей."
+					markDiscript: "Hookah Prime – компания, предоставляющая\nуслуги кальянного кейтеринга премиум-класса.",
+					discript: "Более 10 лет мы занимаемся изучением физики курения\nкальяна — вкус, дымность, тяга, крепость,\nпродолжительность курения и влияние кальяна на\nорганизм, а также, гн.юансы миксологии табачных смесей."
 				},
 				ourClients: {
 					title: "Our Clients"
@@ -39,11 +40,12 @@ const store = new Vuex.Store({
 				primeMasters: {
 					title: "Prime Masters",
 					nameMisha: "Mikhail Shapovalov",
-					discriptMisha: "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher.",
+					discriptMisha: "Misha! International coucher.\nHookah Prime catering & Hookah Prime\ntobacco founder. Hookah High School teacher.",
 					nameVova: "Vladimir Shapovalov",
-					discriptVova: "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher."
+					discriptVova: "Vova! International coucher.\nHookah Prime catering & Hookah Prime\ntobacco founder. Hookah High School teacher."
 				}
 			},
+
 			ru: {
 				headLine: {
 					calculatePrice: "Посчитать",
@@ -53,8 +55,8 @@ const store = new Vuex.Store({
 				},
 				abutUs: {
 					title: "About us",
-					markDiscript: "Hookah Prime – компания, предоставляющая услуги кальянного кейтеринга премиум-класса.",
-					discript: "Более 10 лет мы занимаемся изучением физики курения кальяна — вкус, дымность, тяга, крепость, продолжительность курения и влияние кальяна на организм, а также, гн.юансы миксологии табачных смесей."
+					markDiscript: "Hookah Prime – компания, предоставляющая услуги\nкальянного кейтеринга премиум-класса.",
+					discript: "Более 10 лет мы занимаемся изучением физики курения\nкальяна — вкус, дымность, тяга, крепость,\nпродолжительность курения и влияние кальяна на\nорганизм, а также, гн.юансы миксологии табачных смесей."
 				},
 				ourClients: {
 					title: "Our Clients"

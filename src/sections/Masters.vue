@@ -2,40 +2,29 @@
   <div id="masters">
   	<div class="cont-title"></div>
   	<div class="cont-tap-masters">
-  		<tapMasters />
+  		<TapMasters :text="text" />
   	</div>
   </div>
 </template>
 
 <script>
-import { prime_masters } from '../assets/text/text.json';
 import drawTitle from '../utils/drawTitle.js';
-import tapMasters from '../components/tapMasters.vue';
+import TapMasters from '../components/tapMasters.vue';
 
 export default {
   name: 'Masters',
-  components: { tapMasters },
+  components: { TapMasters },
   data () {
     return {
-      lang: 'en',
-      text: prime_masters,
+      lang: ''
     }
   },
   computed: {
+    text: function() {
+      return this.$store.getters.text.primeMasters
+    },
   	title: function() {
-  		return this.text.title[this.lang];
-  	},
-  	nameMisha: function() {
-  		return this.text.name_Misha[this.lang]
-  	},
-  	nameVova: function() {
-  		return this.text.name_Vova[this.lang]
-  	},
-  	discriptMisha: function() {
-  		return this.text.discript_Misha[this.lang]
-  	},
-  	discriptVova: function() {
-  		return this.text.discript_Vova[this.lang]
+  		return this.text.title;
   	}
   },
   mounted() {

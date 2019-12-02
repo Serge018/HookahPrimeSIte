@@ -33,6 +33,7 @@ html {
 	line-height: 1.764rem;
 	color: var(--gold-color);
 	letter-spacing: -0.029rem;
+	white-space: pre;
 }
 
 .discript {
@@ -41,6 +42,7 @@ html {
 	line-height: 1.764rem;
 	color: var(--white-color);
 	letter-spacing: -0.029rem;
+	white-space: pre;
 }
 
 .price {

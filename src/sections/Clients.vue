@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { our_clients } from '../assets/text/text.json';
 import helpers from '../utils/helpers.js';
 import drawTitle from '../utils/drawTitle.js';
 import Inertia from '../utils/inertia.js';
@@ -22,10 +21,9 @@ import Inertia from '../utils/inertia.js';
 export default {
   name: 'Clients',
   data () {
+
     return {
-    	lang: "en",
-    	text: our_clients,
-    	setImgName: our_clients.setImgName,
+    	setImgName: this.$store.state.setImgName,
     	clientsBar: null,
     	wrapperClientsBar: null,
     	inertia: null,
@@ -35,7 +33,7 @@ export default {
   },
   computed: {
   	title: function() {
-  		return this.text.title[this.lang];
+  		return this.$store.getters.text.ourClients.title;
   	}
   },
   methods: {
@@ -96,7 +94,6 @@ export default {
 		}
 
 		.wrap-clients-bar {
-
 			position: relative;
 			margin-left: 11.764rem;
 			margin-top: 4.882rem;

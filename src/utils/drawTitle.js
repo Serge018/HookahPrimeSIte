@@ -9,7 +9,7 @@ export default function({parent, text, type = "title", width, height, wordWrap =
       fill = ["rgba(255,255,255,0.9)", "rgba(255,255,255,0.1)"];
     } else {
       fontSize = 50, 
-      lineHeight = 55, 
+      lineHeight = 50, 
       letterSpacing = -1.67,
       fill = ["rgba(255,187,51,0.9)", "rgba(255,187,51,0.1)"];
     }
