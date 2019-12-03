@@ -1,5 +1,5 @@
 <template>
-  <div id="tap-masters" @click="runIntreval">
+  <div id="tap-masters">
   	<div class="icons">
   		<div 
   			v-for="name in names" 
@@ -56,7 +56,7 @@ export default {
       },
       nodeIconMisha: null,
       nodeIconVova: null,
-      setNodeIcons: false,
+      setNodeIcons: [],
       currentName: "",
       flagAutoPlay: true,
       isActive: true,
@@ -114,10 +114,10 @@ export default {
       });
     });
 
-    this.nodeIconMisha = this.$el.querySelector(`.icon-Misha`);
-    this.nodeIconVova = this.$el.querySelector(`.icon-Vova`);
-    this.setNodeIcons = [this.nodeIconMisha, this.nodeIconVova];
-
+    this.names.forEach((name) => {
+      this[`nodeIcon${name}`] = this.$el.querySelector(`.icon-${name}`);
+      this.setNodeIcons.push(this[`nodeIcon${name}`]);
+    });
 
     // the temporare plug
     this.flagAutoPlay = true;
