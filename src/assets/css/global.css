@@ -54,6 +54,14 @@ html {
   color: var(--white-color);
 }
 
+.bp {
+	opacity: 0;
+}
+.bp-4 {
+	opacity: 1;
+}
+
+
  @media (min-width: 768px) { 
 /* 	html {
 	font-size: 14px;
@@ -64,16 +72,37 @@ html {
 	html {
 		font-size: 15px;
 	}
+
+	.bp-3 {
+		opacity: 1;
+	}
+	.bp-4, .bp-2, .bp-1 {
+		opacity: 0;
+	}
 }
 
 @media (min-width: 1200px) { 
 	html {
 		font-size: 17px;
 	}
+
+	.bp-2 {
+		opacity: 1;
+	}
+	.bp-4, .bp-3, .bp-1 {
+		opacity: 0;
+	}
 }
 
 @media (min-width: 1600px) { 
 	html {
 		font-size: 20px;
+	}
+
+	.bp-1 {
+		opacity: 1;
+	}
+	.bp-4, .bp-3, .bp-2 {
+		opacity: 0;
 	}
 }
