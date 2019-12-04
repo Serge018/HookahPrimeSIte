@@ -1,8 +1,8 @@
 <template>
   <div id="hookahs">
 		<div class="hookahs-img">
-			<div class="hokah-img hokah-img-left"></div>
-			<div class="hokah-img hokah-img-right"></div>
+			<div class="hokah-img hokah-img-back hokah-img-left"></div>
+			<div class="hokah-img hokah-img-back hokah-img-right"></div>
 			<div class="hokah-img hokah-img-front"></div>
 		</div>
 		<div class="content">
@@ -19,12 +19,16 @@
 
 <script>
 import drawTitle from '../utils/drawTitle.js';
+import helpers from '../utils/helpers.js';
 
 export default {
   name: 'Hookah',
   data () {
     return {
-      msg: ''
+      displacement: {
+      	frontHokah: 150,
+      	backHookahs: 70
+      }
     }
   },
   computed: {
@@ -42,7 +46,11 @@ export default {
   	}
   },
   mounted() {
-  	const parentTitle = this.$el.querySelector('.wrap-title')
+  	const 
+  		parentTitle = this.$el.querySelector('.wrap-title'),
+  		frontHokah = this.$el.querySelector('.hokah-img-front'),
+  		setOfBackHokah = this.$el.querySelectorAll('.hokah-img-back');
+
   	drawTitle({ 
       parent: parentTitle,
       text: this.title, 
@@ -51,6 +59,25 @@ export default {
       wordWrap: true,
       fillGradientStops: [0.07,1]
     });
+
+  	const runParallax = () => {
+  		const 
+  			indent = this.$el.getBoundingClientRect().y,
+  			windowHeight = window.innerHeight,
+  			heightElem = helpers.getPropStyle(this.$el, 'height');
+  		if (indent<windowHeight && indent>-heightElem ) {
+	  		const 
+	  			amplitude = windowHeight+heightElem,
+	  			delta = 0.5-(amplitude-indent-heightElem)/amplitude,
+	  			shiftFront = delta*this.displacement.frontHokah,
+	  			shiftBack = delta*this.displacement.backHookahs;
+	  		frontHokah.style.transform = `translateY(${shiftFront}px)`;
+	  		setOfBackHokah.forEach(elem => elem.style.transform = `translateY(${-shiftBack}px)`)
+  		}
+  		requestAnimationFrame(runParallax)
+  	}
+  	runParallax()
+
   }
 }
 </script>

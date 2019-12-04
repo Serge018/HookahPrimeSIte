@@ -3,8 +3,6 @@ export default {
 	getPropStyle: function(el, nameProp) {
     return parseInt(getComputedStyle(el)[nameProp]);
   },
-
-
   removeClass: function(nodes, className) {
   	if (Array.isArray(nodes)) {
   		nodes.forEach(node => {
