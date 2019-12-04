@@ -9,7 +9,7 @@
 
 <script>
 import drawTitle from '../utils/drawTitle.js';
-import TapMasters from '../components/tapMasters.vue';
+import TapMasters from '../components/TapMasters.vue';
 
 export default {
   name: 'Masters',
@@ -43,7 +43,6 @@ export default {
 
 <style lang="scss" scoped>
 #masters {
-	height: 50vh;
 
 	.cont-title {
 		margin-top: 15.47rem;

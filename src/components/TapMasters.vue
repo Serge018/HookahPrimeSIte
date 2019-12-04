@@ -134,7 +134,6 @@ export default {
 
 <style lang="scss" scoped>
 	#tap-masters {
-    padding-bottom: 300px;
 
 		.icons {
 			margin-top: 3.588rem;
@@ -220,7 +219,7 @@ export default {
 
     .container-content {
       position: relative;
-      height: 14.117rem;
+      height: 15.2rem;
 
 
       .wrap-content {

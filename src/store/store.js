@@ -43,6 +43,11 @@ const store = new Vuex.Store({
 					discriptMisha: "Misha! International coucher.\nHookah Prime catering & Hookah Prime\ntobacco founder. Hookah High School teacher.",
 					nameVova: "Vladimir Shapovalov",
 					discriptVova: "Vova! International coucher.\nHookah Prime catering & Hookah Prime\ntobacco founder. Hookah High School teacher."
+				},
+				primeHookah: {
+					title: "Prime Hookahs",
+					markDiscript: "Каждый элемент тщательно подбирается и тестируется\nнашими мастерами, чтобы обеспечить вам максимальный\nкомфорт от курения.",
+					discript: "Мы ухаживаем за нашими\nкальянами и постоянно находимся\nв поиске новых решений, чтобы\nугодить самым изысканным\nвкусам ваших гостей."
 				}
 			},
 
@@ -61,12 +66,17 @@ const store = new Vuex.Store({
 				ourClients: {
 					title: "Our Clients"
 				},
-					primeMasters: {
+				primeMasters: {
 					title: "Prime Masters",
 					nameMisha: "Mikhail Shapovalov",
 					discriptMisha: "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher.",
 					nameVova: "Vladimir Shapovalov",
 					discriptVova: "International coucher. Hookah Prime catering & Hookah Prime tobacco founder. Hookah High School teacher."
+				},
+				primeHookah: {
+					title: "Prime Hookahs",
+					markDiscript: "Каждый элемент тщательно подбирается и тестируется\nнашими мастерами, чтобы обеспечить вам максимальный\nкомфорт от курения.",
+					discript: "Мы ухаживаем за нашими\nкальянами и постоянно находимся\nв поиске новых решений, чтобы\nугодить самым изысканным\nвкусам ваших гостей."
 				}
 			}
 		}
