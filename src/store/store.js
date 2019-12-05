@@ -48,6 +48,17 @@ const store = new Vuex.Store({
 					title: "Prime Hookahs",
 					markDiscript: "Каждый элемент тщательно подбирается и тестируется\nнашими мастерами, чтобы обеспечить вам максимальный\nкомфорт от курения.",
 					discript: "Мы ухаживаем за нашими\nкальянами и постоянно находимся\nв поиске новых решений, чтобы\nугодить самым изысканным\nвкусам ваших гостей."
+				},
+				ceremonies: {
+					title: "Our Ceremonies Philosophy",
+					subtitlePrepare: "Detailed Prepair",
+					subtitleDegustetion: "Presentation & Degustation",
+					subtitleSupport: "Competent Support",
+					subtitleDiscipline: "Cleanliness & Discipline",
+					discrriptPrepare: "Мастер приезжает за час до\nназначенного времени, подготавливает\nрабочее место и кальяны.",
+					discrriptDegustetion: "Существет большое количество различных\nсортов и вкусов табака. Мы презентуем\nкаждый кальян, ведь мы заинтересованы в\nтом, чтобы вы действительно насладились\nпроцессом курения",
+					discrriptSupport: "Полный контроль курения кальянов,\nсвоевременная замена углей и чаши.\nТак же, мы следим за тем, какие эмоции\nиспытывает человек во время курения.",
+					discrriptDiscipline: "За собой мы оставляем\nчистоту и порядок в зоне\nотведеной для курения.",
 				}
 			},
 
@@ -77,6 +88,17 @@ const store = new Vuex.Store({
 					title: "Prime Hookahs",
 					markDiscript: "Каждый элемент тщательно подбирается и тестируется\nнашими мастерами, чтобы обеспечить вам максимальный\nкомфорт от курения.",
 					discript: "Мы ухаживаем за нашими\nкальянами и постоянно находимся\nв поиске новых решений, чтобы\nугодить самым изысканным\nвкусам ваших гостей."
+				},
+				ceremonies: {
+					title: "Our Ceremonies Philosophy",
+					subtitlePrepare: "Detailed Prepair",
+					subtitleDegustetion: "Presentation & Degustation",
+					subtitleSupport: "Competent Support",
+					subtitleDiscipline: "Cleanliness & Discipline",
+					discrriptPrepare: "Мастер приезжает за час до\nназначенного времени, подготавливает\nрабочее место и кальяны.",
+					discrriptDegustetion: "Существет большое количество различных\nсортов и вкусов табака. Мы презентуем\nкаждый кальян, ведь мы заинтересованы в\nтом, чтобы вы действительно насладились\nпроцессом курения",
+					discrriptSupport: "Полный контроль курения кальянов,\nсвоевременная замена углей и чаши.\nТак же, мы следим за тем, какие эмоции\nиспытывает человек во время курения.",
+					discrriptDiscipline: "За собой мы оставляем\nчистоту и порядок в зоне\nотведеной для курения.",
 				}
 			}
 		}

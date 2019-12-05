@@ -4,8 +4,8 @@
     <AboutUs/>
     <Clients/>
     <Masters/>
-    <Ceremonies/>
     <Hookah/>
+    <Ceremonies/>
     <Footer/>
   </div>
 </template>
