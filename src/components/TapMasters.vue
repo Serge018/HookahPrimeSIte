@@ -37,9 +37,10 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import drawTitle from '../utils/drawTitle.js';
 import helpers from '../utils/helpers.js';
-	
+
 export default {
 	name: 'TapMasters',
   props: [ "text" ],
@@ -60,10 +61,10 @@ export default {
       currentName: "",
       flagAutoPlay: true,
       isActive: true,
-      interval: null
+      interval: null,
+      needRunAutoPlay: true
 		}
 	},
-  computed: {},
   methods: {
     choosePerson: function(e) {
       const 
@@ -88,15 +89,23 @@ export default {
       }
     },
     runIntreval: function() {
-      /*this.flagAutoPlay = true;
+      this.flagAutoPlay = true;
       this.nodeIconMisha.classList.add('animateIcon');
       this.interval = setInterval(() => {
         if (this.flagAutoPlay) {
           helpers.toggleClass(this.setNodeIcons, 'animateIcon');
           this.isActive = !this.isActive;
         }
-      }, 7100);*/
+      }, 7100);
     }
+  },
+  created() {
+    this.$bus.$on('scroll', () => {
+      if (this.$el.getBoundingClientRect().y < window.innerHeight && this.needRunAutoPlay) {
+        this.needRunAutoPlay = false;
+        this.runIntreval();
+      }
+    });
   },
   mounted() {
     this.names.forEach((name) => {
@@ -118,16 +127,6 @@ export default {
       this[`nodeIcon${name}`] = this.$el.querySelector(`.icon-${name}`);
       this.setNodeIcons.push(this[`nodeIcon${name}`]);
     });
-
-    // the temporare plug
-    this.flagAutoPlay = true;
-    this.nodeIconMisha.classList.add('animateIcon');
-    this.interval = setInterval(() => {
-      if (this.flagAutoPlay) {
-        helpers.toggleClass(this.setNodeIcons, 'animateIcon');
-        this.isActive = !this.isActive;
-      }
-    }, 7250);
   }
 }
 </script>

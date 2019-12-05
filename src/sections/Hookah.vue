@@ -65,12 +65,14 @@ export default {
   			indent = this.$el.getBoundingClientRect().y,
   			windowHeight = window.innerHeight,
   			heightElem = helpers.getPropStyle(this.$el, 'height');
+
   		if (indent<windowHeight && indent>-heightElem ) {
 	  		const 
 	  			amplitude = windowHeight+heightElem,
 	  			delta = 0.5-(amplitude-indent-heightElem)/amplitude,
 	  			shiftFront = delta*this.displacement.frontHokah,
 	  			shiftBack = delta*this.displacement.backHookahs;
+
 	  		frontHokah.style.transform = `translateY(${shiftFront}px)`;
 	  		setOfBackHokah.forEach(elem => elem.style.transform = `translateY(${-shiftBack}px)`)
   		}
@@ -110,6 +112,7 @@ export default {
 		}
 
 		.hookahs-img {
+			will-change: transform;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;

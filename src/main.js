@@ -10,8 +10,8 @@ import store from './store/store';
 
 
 Vue.config.productionTip = false
-
-
+const eventBus = new Vue();
+Vue.prototype.$bus = eventBus;
 
 /* eslint-disable no-new */
 new Vue({
@@ -19,4 +19,8 @@ new Vue({
   store,
   components: { App },
   template: '<App/>'
-})
+});
+
+window.addEventListener("scroll", () => {
+	eventBus.$emit('scroll')
+});

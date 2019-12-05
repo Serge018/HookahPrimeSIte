@@ -50,7 +50,7 @@ export default {
 	  		});
 	  		const update = () => {
 	  			const value = this.inertia.update(this.delta);
-	  			this.clientsBar.style.left = `-${value}px`;
+	  			this.clientsBar.style.transform = `translateX(-${value}px)`;
 	  			if (value < 1) {
 	  				this.inertia.setValue(0);
 	  			} else {
@@ -94,6 +94,7 @@ export default {
 		}
 
 		.wrap-clients-bar {
+			will-change: transform;
 			position: relative;
 			margin-left: 11.764rem;
 			margin-top: 4.882rem;
