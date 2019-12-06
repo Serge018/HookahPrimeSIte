@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" data-scrollbar>
     <Header/>
     <AboutUs/>
     <Clients/>
-    <Masters/>
+    <Masters/> 
     <Hookah/>
     <Ceremonies/>
     <Footer/>
@@ -18,6 +18,10 @@ import Masters from './sections/Masters';
 import Ceremonies from './sections/Ceremonies';
 import Hookah from './sections/Hookah';
 import Footer from './sections/Footer';
+import Scrollbar from 'smooth-scrollbar';
+import './utils/device.js';
+
+const isDesktop = (device.desktop());
 
 export default {
   name: 'App',
@@ -29,12 +33,21 @@ export default {
     Ceremonies,
     Hookah,
     Footer
+  },
+  mounted() {
+    if (isDesktop) {
+      Scrollbar.initAll(this.$el, {
+        damping: 0.1,
+        renderByPixels: true
+      });
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #app {
-  
+    width: 100%;
+    height: 100%;
 }
 </style>

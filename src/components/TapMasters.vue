@@ -99,14 +99,6 @@ export default {
       }, 7100);
     }
   },
-  created() {
-    this.$bus.$on('scroll', () => {
-      if (this.$el.getBoundingClientRect().y < window.innerHeight && this.needRunAutoPlay) {
-        this.needRunAutoPlay = false;
-        this.runIntreval();
-      }
-    });
-  },
   mounted() {
     this.names.forEach((name) => {
       const 
@@ -127,6 +119,16 @@ export default {
       this[`nodeIcon${name}`] = this.$el.querySelector(`.icon-${name}`);
       this.setNodeIcons.push(this[`nodeIcon${name}`]);
     });
+
+    const checkPos = () => {
+      if (this.$el.getBoundingClientRect().y < window.innerHeight && this.needRunAutoPlay) {
+        this.needRunAutoPlay = false;
+        this.runIntreval();
+      } else {
+        requestAnimationFrame(checkPos);
+      }
+    }
+    checkPos();
   }
 }
 </script>
