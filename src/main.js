@@ -7,15 +7,11 @@ import "normalize.css";
 import "./assets/css/fonts.css";
 import "./assets/css/global.css";
 
-
 import store from './store/store';
 
-
 Vue.config.productionTip = false
-// const eventBus = new Vue();
-// Vue.prototype.$bus = eventBus;
-
-
+const eventBus = new Vue();
+Vue.prototype.$bus = eventBus;
 
 /* eslint-disable no-new */
 new Vue({

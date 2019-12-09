@@ -1,5 +1,5 @@
 <template>
-  <div id="app" data-scrollbar>
+  <div id="app">
     <Header/>
     <AboutUs/>
     <Clients/>
@@ -36,7 +36,7 @@ export default {
   },
   mounted() {
     if (isDesktop) {
-      Scrollbar.initAll(this.$el, {
+      Scrollbar.init(this.$el, {
         damping: 0.1,
         renderByPixels: true
       });
