@@ -27,7 +27,7 @@ export default {
     return {
       displacement: {
       	frontHokah: 150,
-      	backHookahs: 70
+      	backHookahs: 80
       }
     }
   },

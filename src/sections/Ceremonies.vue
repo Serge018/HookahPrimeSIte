@@ -1,26 +1,32 @@
 <template>
   <div id="ceremonies">
   	<div class="wrap-title"></div>
-		
-
+      <blockContent 
+        v-for="(opt, i) in optSet" 
+        :opt="opt" 
+      />
   </div>
 </template>
 
 <script>
 import drawTitle from '../utils/drawTitle.js';
+import blockContent from '../components/blockContentCeremonies';
 
 export default {
   name: 'Ceremonies',
-  components: {},
+  components: { blockContent },
   data () {
     return {
-      msg: ''
+      setBlockName: this.$store.state.setBlockName
     }
   },
   computed: {
-  	text: function() {
-  		return this.$store.getters.text.ceremonies
-  	}
+  	title: function() {
+  		return this.$store.getters.text.ceremonies.title;
+  	},
+    optSet: function() {
+      return this.$store.getters.optDiscript;
+    }
   },
   mounted() {
   	const 
@@ -28,7 +34,7 @@ export default {
 
   	drawTitle({ 
       parent: wrapTitleMain,
-      text: this.text.title, 
+      text: this.title, 
       width: 540, 
       height: 250,
       wordWrap: true,
@@ -44,6 +50,7 @@ export default {
 
 		.wrap-title {
 			margin-left: 11.764rem;
+      margin-bottom: 8.529rem;
 		}
 	}
 </style>

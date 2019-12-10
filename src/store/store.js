@@ -20,6 +20,12 @@ const store = new Vuex.Store({
 			"munshtuk_icon", 
 			"affa_icon"
 		],
+		setBlockName: [
+			"Prepare",
+			"Degustetion",
+			"Support",
+			"Discipline"
+		],
 		textSet: {
 
 			en: {
@@ -111,6 +117,17 @@ const store = new Vuex.Store({
 		},
 		text: function (state) {
 			return state.textSet[state.lang];
+		},
+		optDiscript: function(state) {
+			const opt = state.setBlockName.reduce((acc, currName) => {
+        acc[currName] = {
+          subtitle: state.textSet[state.lang].ceremonies[`subtitle${currName}`],
+          discript: state.textSet[state.lang].ceremonies[`discrript${currName}`],
+          className: currName
+        };
+        return acc;
+      }, {});
+      return opt;
 		}
 	},
 
