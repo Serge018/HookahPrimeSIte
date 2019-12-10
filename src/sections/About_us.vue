@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import drawTitle from '../utils/drawTitle.js';
+import drawTitle from '../utils/drawGradientTitle.js';
 
 export default {
   name: 'AboutUs',

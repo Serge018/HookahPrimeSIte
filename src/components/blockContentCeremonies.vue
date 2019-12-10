@@ -13,7 +13,8 @@
 </template>
 
 <script>
-	import drawTitle from '../utils/drawTitle.js';
+	import drawTitle from '../utils/drawGradientTitle.js';
+	import helpers from '../utils/helpers.js';
 
 export default {
   name: 'blockContent',
@@ -22,11 +23,14 @@ export default {
     return {
       className: this.$props.opt.className,
       subtitle: this.$props.opt.subtitle,
-      discript: this.$props.opt.discript
+      discript: this.$props.opt.discript,
+      displacement: 70
     }
   },
   mounted() {
-  	const wrapSubtitle = this.$el.querySelector('.wrap-subtitle');
+  	const 
+  		wrapSubtitle = this.$el.querySelector('.wrap-subtitle'),
+  		picture = this.$el.querySelector('.img');
 
   	drawTitle({ 
       parent: wrapSubtitle,
@@ -37,6 +41,22 @@ export default {
       fillGradientStops: [0, 0.9],
       type: "subtitle"
     });
+
+    const runParallax = () => {
+  		const 
+  			indent = this.$el.getBoundingClientRect().y,
+  			windowHeight = window.innerHeight,
+  			heightElem = helpers.getPropStyle(this.$el, 'height');
+  		if (indent<windowHeight && indent>-heightElem ) {
+	  		const 
+	  			amplitude = windowHeight+heightElem,
+	  			delta = 0.5-(amplitude-indent-heightElem)/amplitude,
+	  			shiftFront = delta*this.displacement;
+	  		picture.style.transform = `translateY(${shiftFront}px)`;
+  		}
+  		requestAnimationFrame(runParallax)
+  	}
+  	runParallax()
   }
 }
 </script>
@@ -89,9 +109,13 @@ export default {
 		}
 
 		.img {
+			position: relative;
+			top: -2rem;
+			will-change: transform;
 			width: 17.647rem;
 			height: 17.647rem;
 			background-size: 100% auto;
+			background-repeat: no-repeat;
 		}
 
 		&-Degustetion,

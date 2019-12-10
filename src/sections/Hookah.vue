@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import drawTitle from '../utils/drawTitle.js';
+import drawTitle from '../utils/drawGradientTitle.js';
 import helpers from '../utils/helpers.js';
 
 export default {

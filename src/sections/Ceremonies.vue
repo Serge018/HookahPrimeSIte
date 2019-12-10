@@ -3,13 +3,14 @@
   	<div class="wrap-title"></div>
       <blockContent 
         v-for="(opt, i) in optSet" 
+        v-bind:key="i"
         :opt="opt" 
       />
   </div>
 </template>
 
 <script>
-import drawTitle from '../utils/drawTitle.js';
+import drawTitle from '../utils/drawGradientTitle.js';
 import blockContent from '../components/blockContentCeremonies';
 
 export default {

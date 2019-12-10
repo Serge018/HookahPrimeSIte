@@ -15,7 +15,7 @@
 
 <script>
 import helpers from '../utils/helpers.js';
-import drawTitle from '../utils/drawTitle.js';
+import drawTitle from '../utils/drawGradientTitle.js';
 import Inertia from '../utils/inertia.js';
 
 export default {

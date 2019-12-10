@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import drawTitle from '../utils/drawTitle.js';
+import drawTitle from '../utils/drawGradientTitle.js';
 import TapMasters from '../components/TapMasters.vue';
 
 export default {

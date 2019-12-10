@@ -4,8 +4,6 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 
-
-
 const store = new Vuex.Store({
 	state: {
 		lang: "en",
@@ -26,6 +24,11 @@ const store = new Vuex.Store({
 			"Support",
 			"Discipline"
 		],
+		"contacts": {
+			"email": "info@hprime.ru",
+			"phone": "+7 905 232 4304",
+			"insta": "hookah_prime"
+		},
 		textSet: {
 
 			en: {
@@ -65,6 +68,11 @@ const store = new Vuex.Store({
 					discrriptDegustetion: "Существет большое количество различных\nсортов и вкусов табака. Мы презентуем\nкаждый кальян, ведь мы заинтересованы в\nтом, чтобы вы действительно насладились\nпроцессом курения",
 					discrriptSupport: "Полный контроль курения кальянов,\nсвоевременная замена углей и чаши.\nТак же, мы следим за тем, какие эмоции\nиспытывает человек во время курения.",
 					discrriptDiscipline: "За собой мы оставляем\nчистоту и порядок в зоне\nотведеной для курения.",
+				},
+				footer: {
+					subtitleLogo: "Hookah Prime",
+					subtitleDiscr: "LUXARY CATERING",
+					discription: "Мы всегда готовы обсудить ваши идеи и предложения.\nЗвоните и мы сделаем ваше событие незабываемым!"
 				}
 			},
 
@@ -105,6 +113,11 @@ const store = new Vuex.Store({
 					discrriptDegustetion: "Существет большое количество различных\nсортов и вкусов табака. Мы презентуем\nкаждый кальян, ведь мы заинтересованы в\nтом, чтобы вы действительно насладились\nпроцессом курения",
 					discrriptSupport: "Полный контроль курения кальянов,\nсвоевременная замена углей и чаши.\nТак же, мы следим за тем, какие эмоции\nиспытывает человек во время курения.",
 					discrriptDiscipline: "За собой мы оставляем\nчистоту и порядок в зоне\nотведеной для курения.",
+				},
+				footer: {
+					subtitleLogo: "Hookah Prime",
+					subtitleDiscr: "LUXARY CATERING",
+					discription: "Мы всегда готовы обсудить ваши идеи и предложения.\nЗвоните и мы сделаем ваше событие незабываемым!"
 				}
 			}
 		}
