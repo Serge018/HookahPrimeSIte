@@ -30,7 +30,6 @@ const store = new Vuex.Store({
 			"insta": "hookah_prime"
 		},
 		textSet: {
-
 			en: {
 				headLine: {
 					calculatePrice: "Calculate Price",
@@ -73,6 +72,18 @@ const store = new Vuex.Store({
 					subtitleLogo: "Hookah Prime",
 					subtitleDiscr: "LUXARY CATERING",
 					discription: "Мы всегда готовы обсудить ваши идеи и предложения.\nЗвоните и мы сделаем ваше событие незабываемым!"
+				},
+				popup: {
+					messagePart1: "Please,",
+					messagePart2: "Send us your phone number",
+					messagePart3: "And we call you back",
+					enterPhone: "Enter Phone number",
+					send: "Send",
+					gratitudePart1: "Thank you!",
+					gratitudePart2: "We call back as soon",
+					gratitudePart3: "as posible",
+					backFromPopup: "back to main page",
+					closePopup: "close page"
 				}
 			},
 
@@ -118,12 +129,22 @@ const store = new Vuex.Store({
 					subtitleLogo: "Hookah Prime",
 					subtitleDiscr: "LUXARY CATERING",
 					discription: "Мы всегда готовы обсудить ваши идеи и предложения.\nЗвоните и мы сделаем ваше событие незабываемым!"
+				},
+				popup: {
+					messagePart1: "Please,",
+					messagePart2: "Send us your phone number",
+					messagePart3: "And we call you back",
+					enterPhone: "Enter Phone number",
+					send: "Send",
+					gratitudePart1: "Thank you!",
+					gratitudePart2: "We call back as soon",
+					gratitudePart3: "as posible",
+					backFromPopup: "back to main page",
+					closePopup: "close page"
 				}
 			}
 		}
 	},
-
-
 	getters: {
 		lang: function (state) {
 			return state.lang;
@@ -143,15 +164,11 @@ const store = new Vuex.Store({
       return opt;
 		}
 	},
-
-
 	mutations: {
 		changeLang: function (state, payload) {
 			state.lang = payload;
 		}
 	},
-
-
 	actions: {
 		changeLang: function (context, payload) {
 			context.commit('changeLang', payload);
